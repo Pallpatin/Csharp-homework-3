@@ -23,7 +23,7 @@ internal class Program
         /*Задфние 2
          * Напишите метод, который проверяет является ли 
 переданное число «палиндромом». Число передаётся в 
-качестве параметра. Если число палиндром нужно вернуть из метода true, иначе false.
+качестве параметра. Если число палиндром нужно вернуть из метода true, иначе false.
 Палиндром — число, которое читается одинаково как 
 справа налево, так и слева направо. Например:
 1221 — палиндром;
@@ -79,9 +79,39 @@ internal class Program
         Console.WriteLine("Создайте класс «Веб-сайт». Необходимо хранить в \r\nполях класса: название сайта, путь к сайту, описание \r\nсайта, ip адрес сайта. Реализуйте методы класса для ввода \r\nданных, вывода данных, реализуйте доступ к отдельным \r\nполям через методы класса.");
         WebSite site = new WebSite("ютуб", "https://www.youtube.com", "просмотр видеолент", new IPAddress(new byte[] { 95, 25, 55, 242 }));
         site.Show();
+        
         Console.WriteLine();
         Console.WriteLine("нажмите любую кнопку");
         Console.ReadKey(true);
+        /*Задание 5
+         Создайте класс «Журнал». Необходимо хранить в 
+полях класса: название журнала, год основания, описание журнала, контактный телефон, контактный e-mail. 
+Реализуйте методы класса для ввода данных, вывода 
+данных, реализуйте доступ к отдельным полям через 
+методы класса */
+        Console.Clear();
+        Console.WriteLine("Задание №" + tasknumber++);
+        Console.WriteLine("Создайте класс «Журнал». Необходимо хранить в \r\nполях класса: название журнала, год основания, описание журнала, контактный телефон, контактный e-mail. \r\nРеализуйте методы класса для ввода данных, вывода \r\nданных, реализуйте доступ к отдельным полям через \r\nметоды класса");
+
+        Console.WriteLine();
+        Console.WriteLine("нажмите любую кнопку");
+        Console.ReadKey(true);
+
+        /*Задание 6
+         Создайте класс «Магазин». Необходимо хранить в 
+полях класса: название магазина, адрес, описание профиля магазина, контактный телефон, контактный e-mail. 
+Реализуйте методы класса для ввода данных, вывода 
+данных, реализуйте доступ к отдельным полям через 
+методы класса*/
+        Console.Clear();
+        Console.WriteLine("Задание №" + tasknumber++);
+        Console.WriteLine("Создайте класс «Магазин». Необходимо хранить в \r\nполях класса: название магазина, адрес, описание про\u0002филя магазина, контактный телефон, контактный e-mail. \r\nРеализуйте методы класса для ввода данных, вывода \r\nданных, реализуйте доступ к отдельным полям через \r\nметоды класса");
+        Journal journal = new Journal();
+        Console.WriteLine(journal.Name,journal.telephone,journal.Email);
+        Console.WriteLine();
+        Console.WriteLine("нажмите любую кнопку");
+        Console.ReadKey(true);
+
     }
     private static void Sqare(int length,char symbol)
     {
@@ -141,10 +171,10 @@ internal class Program
     }
     class WebSite
     {
-        string Name { get; set; }
-        string Path { get; set; }
-        string Opisanie { get; set; }
-        IPAddress IP { get; set; }
+        public string Name { get; set; }
+        public string Path { get; set; }
+        public string Opisanie { get; set; }
+        public IPAddress IP { get; set; }
         public void Show()
         {
             Console.WriteLine("Name - "+Name);
@@ -159,5 +189,20 @@ internal class Program
             this.Opisanie = Opisanie;
             this.IP = IP;
         }
+    }
+
+    class Journal
+    {
+        /*Задание 5
+         Создайте класс «Журнал». Необходимо хранить в 
+полях класса: название журнала, год основания, описание журнала, контактный телефон, контактный e-mail. 
+Реализуйте методы класса для ввода данных, вывода 
+данных, реализуйте доступ к отдельным полям через 
+методы класса */
+        public string Name { get; set; } = "безымянный";
+        public int Year { get; set; } = 1996;
+        public string Opisanie { get; set; }="описание журнала";
+        public string telephone { get; set; } = "89544568751";
+        public string Email { get; set; } = "@gmail.ru";
     }
 }
